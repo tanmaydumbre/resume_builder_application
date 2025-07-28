@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Builder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:rgb(181, 239, 241);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #444444;
+        }
+
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus, input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form action="/generate" method="post">
+            <label>Full Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="text" name="email" required>
+
+            <label>Phone:</label>
+            <input type="text" name="phone" required>
+
+            <label>Profile Summary:</label>
+            <textarea name="summary" rows="4"></textarea>
+
+            <label>Education:</label>
+            <textarea name="education" rows="4"></textarea>
+
+            <label>Skills:</label>
+            <textarea name="skills" rows="4"></textarea>
+
+            <label>Experience:</label>
+            <textarea name="experience" rows="5"></textarea>
+
+            <label>Languages:</label>
+            <textarea name="languages" rows="2"></textarea>
+
+            <label>Certificates:</label>
+            <textarea name="certificates" rows="2"></textarea>
+
+            <label>Honor Awards:</label>
+            <textarea name="awards" rows="2"></textarea>
+
+            <label>Interests:</label>
+            <textarea name="interests" rows="2"></textarea>
+
+            <button type="submit">Generate PDF Resume</button>
+        </form>
+    </div>
+</body>
+</html>
